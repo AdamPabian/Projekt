@@ -5,13 +5,8 @@
 
 int main()
 {
+    srand(time(NULL));
     Game game;
-    while (game.windowOpen()) {
-
-            game.update();
-
-            game.render();
-
-    }
+    game.run();
     return 0;
 }

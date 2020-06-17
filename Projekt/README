@@ -1,0 +1,41 @@
+Program prosze skompilowac poleceniem make i uruchomic ./main.x
+
+- klasy 
+	na przyklad w GameState.h linijka 7
+	
+- konstruktory
+	GameClass.cc linijka 24
+	
+- destruktory
+	GameClass.cc linijka 32
+	
+- dziedziczenie
+	GameState.h linijka 7  klasa GameState dziedziczy klase State
+	
+- klasa abstrakcyjna
+	State.h klasa State jest abstrakcyjna
+	
+- czysto wirtualne metody
+	State.h linijka 38
+	
+- przeciazanie operatorow
+	plik min.cc(uruchomic ./min.x)
+
+- szablony
+	GameClass.cc linijka 20
+
+- iteratory
+	GameState.cc linijka 96
+	
+- zakresowa petla for
+	GameState.cc linijka 168
+	
+- wlasny szablon klasy lub funkcji
+	GameState.h linijka 7	
+	
+- plik .h z deklaracja i .cc z definicja metod
+	plik GameClass.h i plik GameClass.cc
+	
+- linker
+	Makefile
+	

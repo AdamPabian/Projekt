@@ -1,26 +1,54 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
+#include "GameState.h"
+#include "MainMenuState.h"
 
-class Game {
+class Game{
     private:
-        //Okno
+        //Zmienne
+        
         sf::RenderWindow* window;
         sf::Event event;
-        //Funkcje prywatne
+
+        sf::Clock dtClock;
+        //Logika
+        float dt;
+
+        //obiekty
+        
+        std::stack<State*> states;
+        
+        //funkcje prywatne
         void initializeVariables();
-        void initializeWindow();
-    public: //Konstruktory i destruktory
-        const bool windowOpen() const;
+        void initWindow();
+        void initStates();
+    public:
+        //konstruktor
+        
         Game();
+        
+        //destruktor
+        
         virtual ~Game();
-        //Funkcje
+        
+        //akcesory
+        
+        const bool getEndGame() const;
+        const bool windowIsOpen() const;
+        
+        //funkcje
+
+        //update
+        void updateDt();
         void updateEvents();
         void update();
+
+        //render
+
         void render();
+        void run();
 };
+
 
 #endif
